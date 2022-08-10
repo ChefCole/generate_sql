@@ -109,22 +109,7 @@ pub fn derive_answer_fn(_item: TokenStream) -> TokenStream {
     let fun_sql = quote::quote!(
         impl #str_name {
 
-            ///
-            /// 生成增加sql
-            /// 
-            /// #Example
-            /// 
-            /// #[derive(Debug,GenSql)]
-            ///struct SqlGen{
-            ///    id:String,
-            ///    nick_name:Option<String>,
-            ///    age:i32,
-            ///    height:Option<f32>,
-            ///    create_time:Option<chrono::NaiveDateTime>
-            ///}
-            /// 
-            /// SqlGen::insert_sql(&sqlGen,"sql_gen".to_string());
-            /// 
+            
             fn insert_sql(item: &#str_name,table_name:String) -> String{
                 let mut names = String::new();
                 let mut values = String::new();
@@ -165,6 +150,22 @@ pub fn derive_answer_fn(_item: TokenStream) -> TokenStream {
 }
 
 
+///
+/// 生成增加sql
+/// 
+/// #Example
+/// 
+/// #[derive(Debug,GenSql)]
+///struct SqlGen{
+///    id:String,
+///    nick_name:Option<String>,
+///    age:i32,
+///    height:Option<f32>,
+///    create_time:Option<chrono::NaiveDateTime>
+///}
+/// 
+/// SqlGen::insert_sql(&sqlGen,"sql_gen".to_string());
+/// 
 fn insert_sql_content(param_map: &HashMap::<String,StructAttribute>) -> proc_macro2::TokenStream {
     let mut content= quote::quote!();
     for (_name,attr) in param_map.iter() {
