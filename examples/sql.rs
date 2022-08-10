@@ -14,5 +14,4 @@ fn main(){
     };
 
     let insert_sql = UserModel::insert_sql(&user_model,"sys_user".to_string());
-    println!("{}",insert_sql);
 }

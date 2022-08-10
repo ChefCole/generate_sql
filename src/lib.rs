@@ -15,7 +15,6 @@ struct StructAttribute{
 #[proc_macro_derive(GenSql)]
 pub fn derive_answer_fn(_item: TokenStream) -> TokenStream {
 
-    println!("{:#?}",_item);
     let mut index = 0;
     let mut struct_name: String = "".to_string();
     let mut param_map = HashMap::<String,StructAttribute>::new();
