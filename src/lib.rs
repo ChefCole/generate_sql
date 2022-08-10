@@ -115,7 +115,7 @@ pub fn derive_answer_fn(_item: TokenStream) -> TokenStream {
         impl #str_name {
 
             
-            fn insert_sql(item: &#str_name,table_name:String) -> String{
+            pub fn insert_sql(item: &#str_name,table_name:String) -> String{
                 let mut names = String::new();
                 let mut values = String::new();
                 let mut start_index = 0;
@@ -124,7 +124,7 @@ pub fn derive_answer_fn(_item: TokenStream) -> TokenStream {
                 format!("insert into {} ({}) values ({})",table_name,names,values)
             }
 
-            fn update_sql(item:&#str_name,table_name:String,id_name:String) -> String{
+            pub fn update_sql(item:&#str_name,table_name:String,id_name:String) -> String{
                 let mut names = String::new();
                 let mut values = String::new();
                 let mut start_index = 0;
@@ -132,7 +132,7 @@ pub fn derive_answer_fn(_item: TokenStream) -> TokenStream {
                 format!("update {} set {} where {}",table_name,values,names)
             }
 
-            fn select_sql(item:&#str_name,table_name:String) -> String {
+            pub fn select_sql(item:&#str_name,table_name:String) -> String {
                 let mut names = String::new();
                 let mut values = String::new();
                 let mut start_index = 0;
@@ -140,7 +140,7 @@ pub fn derive_answer_fn(_item: TokenStream) -> TokenStream {
                 format!("select * from {} where {}",table_name,values)
             }
 
-            fn delete_sql(item:&#str_name,table_name:String,id_name:String) -> String {
+            pub fn delete_sql(item:&#str_name,table_name:String,id_name:String) -> String {
                 let mut names = String::new();
                 let mut values = String::new();
                 let mut start_index = 0;
