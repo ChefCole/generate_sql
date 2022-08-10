@@ -1,6 +1,6 @@
 [package]
 name = "generate_sql"
-version = "0.1.5"
+version = "0.1.51"
 edition = "2021"
 authon = "ruomeng"
 license = "MIT OR Apache-2.0"
@@ -16,4 +16,3 @@ path = "src/lib.rs"
 [dependencies]
 quote = "1.0"
 proc-macro2 = "1.0.43"
-chrono = "0.4.20"
