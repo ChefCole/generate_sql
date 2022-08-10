@@ -5,7 +5,7 @@ edition = "2021"
 authon = "ruomeng"
 license = "MIT OR Apache-2.0"
 description = "Generate SQL according to struct"
-keywords = ["sql", "generate","生成sql语句"]
+keywords = ["generate_sql","database","mysql","postgres","sqlite"]
 repository = "https://github.com/dream45678/generate_sql"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
