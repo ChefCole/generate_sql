@@ -17,7 +17,7 @@ struct SqlGen{
     create_time:Option<chrono::NaiveDateTime>
 }
 ```
-#### 使用方法 (这里时间目前只支持chrono::NaiveDate)
+#### 使用方法 (这里时间目前只支持chrono::NaiveDateTime)
 
 ```
 fn main() {
